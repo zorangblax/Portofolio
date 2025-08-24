@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Porto</title>
+  <meta name="description" content="Template portofolio responsif Bootstrap 5 – cocok untuk developer/designer. Termasuk bagian Hero, Tentang, Skill, Proyek, Pengalaman, dan Kontak." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --accent: #6f42c1; }
+    body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; }
+    html { scroll-behavior: smooth; }
+    .navbar-brand span.logo { width: 36px; height: 36px; display:inline-grid; place-items:center; border-radius:10px; background: var(--accent); color:#fff; font-weight:700; }
+    .nav-link { font-weight: 500; }
+    .btn-accent { --bs-btn-color:#fff; --bs-btn-bg: var(--accent); --bs-btn-border-color: var(--accent); --bs-btn-hover-bg:#5b34a1; --bs-btn-hover-border-color:#5b34a1; }
+    .hero { padding-top: 6rem; padding-bottom: 4rem; }
+    .badge-tech { background: rgba(111,66,193,.1); color: var(--accent); border: 1px solid rgba(111,66,193,.25); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.06); }
+    .section-title { font-weight:700; letter-spacing:.3px; }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before { content:""; position:absolute; left:.55rem; top:.2rem; bottom:.2rem; width:3px; background: var(--bs-border-color); }
+    .timeline-item { position:relative; margin-bottom:1.25rem; }
+    .timeline-item::before { content:""; position:absolute; left:-.05rem; width:14px; height:14px; background: var(--accent); border-radius:50%; top:.35rem; }
+    .link-muted { color: var(--bs-secondary-color); text-decoration:none; }
+    .link-muted:hover { color: var(--bs-body-color); }
+    .card-project img { aspect-ratio: 16/10; object-fit: cover; }
+    .footer { border-top: 1px solid var(--bs-border-color); }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <span class="logo">M</span>
+        <strong>Muhammad Fahreza</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        </ul>
+        <div class="d-flex align-items-center ms-lg-3 gap-2">
+          <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noreferrer"><i class="bi bi-file-earmark-arrow-down"></i> CV</a>
+          <button id="themeToggle" class="btn btn-sm btn-accent" type="button"><i class="bi bi-moon-stars"></i> Tema</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero bg-body-tertiary">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge rounded-pill badge-tech mb-3"><i class="bi bi-code-slash"></i> Web Developer</span>
+          <h1 class="display-5 fw-bold mb-3">Halo, saya <span style="color:var(--accent)">Muhammad Fahreza</span>.</h1>
+          <p class="lead mb-4">Saya membangun aplikasi berbasis web yang cepat dan mudah digunakan. berpengalaman membangun aplikasi
+            menggunakan codeigniter 3 dan bootstrap dengan database MySQL menggunakan phpmyadmin
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#projects" class="btn btn-accent btn-lg"><i class="bi bi-rocket-takeoff"></i> Lihat Proyek</a>
+            <a href="#contact" class="btn btn-outline-secondary btn-lg"><i class="bi bi-envelope"></i> Hubungi Saya</a>
+          </div>
+          <div class="d-flex gap-3 align-items-center mt-4">
+            <a class="link-muted" href="https://github.com/zorangblax" target="_blank" rel="noreferrer"><i class="bi bi-github fs-3"></i></a>
+            <a class="link-muted" href="https://www.linkedin.com/in/m-fahreza-aba535378/" target="_blank" rel="noreferrer"><i class="bi bi-linkedin fs-3"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card shadow-soft border-0">
+            <div class="card-body p-4">
+              <img class="w-100 rounded-4" alt="Foto profil" src="img/foto berwarna.png"/>
+              <div class="mt-3 small text-secondary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">Tentang Saya</h2>
+          <p>Saya adalah developer yang antusias membangun aplikasi web modern menggunakan HTML, CSS, JavaScript, dan framework codeigniter 3 dan bootstrap. Saya siap untuk terus berkembang dan terus belajar.</p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-geo-alt me-2 text-secondary"></i>Jakarta, Indonesia</li>
+            <li class="mb-2"><i class="bi bi-mortarboard me-2 text-secondary"></i>Universitas Bina Sarana Informatika</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="section-title mb-4">Skill & Teknologi</h2>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge rounded-pill text-bg-light border"><i class="bi bi-filetype-html me-1"></i>HTML5</span>
+        <span class="badge rounded-pill text-bg-light border"><i class="bi bi-filetype-css me-1"></i>CSS</span>
+        <span class="badge rounded-pill text-bg-light border"><i class="bi bi-filetype-js me-1"></i>JavaScript</span>
+        <span class="badge rounded-pill text-bg-light border"><i class="bi bi-bootstrap me-1"></i>Bootstrap 5</span>
+        <span class="badge rounded-pill text-bg-light border"><i class="bi bi-database me-1"></i>MySQL</span>
+        <span class="badge rounded-pill text-bg-light border"><i class="bi bi-layers me-1"></i>CodeIgniter</span>
+        <span class="badge rounded-pill text-bg-light border"><i class="bi bi-braces me-1"></i>PHP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="section-title mb-0">Last Proyek</h2>
+      </div>
+      <div class="row g-4">
+        <!-- Project Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-project h-100 border-0 shadow-soft">
+            <img src="img/belanja.PNG" alt="Screenshot proyek" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Sistem Online Shop</h5>
+              <p class="card-text">Aplikasi belanja online yang menggunakan framework codeigniter 3 yang mencakup
+                pengolahan transaksi, user, dan barang
+              </p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="badge text-bg-light border">Codeigniter 3</span>
+                <span class="badge text-bg-light border">Bootstrap</span>
+                <span class="badge text-bg-light border">PHP</span>
+                <span class="badge text-bg-light border">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-project h-100 border-0 shadow-soft">
+            <img src="img/berita.PNG" alt="Screenshot proyek" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Web Berita</h5>
+              <p class="card-text">Web menggunakan framework codeigniter3 yang mengelola berita</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                 <span class="badge text-bg-light border">Codeigniter 3</span>
+                <span class="badge text-bg-light border">Bootstrap</span>
+                <span class="badge text-bg-light border">PHP</span>
+                <span class="badge text-bg-light border">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience / Education -->
+  <section id="experience" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="section-title mb-4">Pengalaman & Pendidikan</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h5 class="mb-3"><i class="bi bi-mortarboard me-2"></i>Pendidikan</h5>
+          <div class="timeline">
+              <h6 class="mb-1">SMAN 105 Jakarta <span class="text-secondary fw-normal"></span></h6>
+              <small class="text-secondary">2022 – sekarang</small>
+              <span></span>
+              <h6 class="mb-1">S1 – Rekayasa Perangkat Lunak <span class="text-secondary fw-normal">• Universitas Bina Sarana Informatika</span></h6>
+              <small class="text-secondary">2022 – sekarang</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">Kontak</h2>
+          <p>Ingin kerja sama atau punya pertanyaan? Kirim pesan melalui form ini atau email langsung ke :</p>
+          <div class="d-flex flex-column gap-2">
+            <span><i class="bi bi-envelope me-2"></i>fahrezagants34@gmail.com</span>
+            <span><i class="bi bi-telephone me-2"></i>+62 857-7307-2471</span>
+            <span><i class="bi bi-geo-alt me-2"></i>Jakarta Timur, Jakarta, Indonesia</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-soft">
+            <div class="card-body p-4">
+              <form action="mailto:fahrezagants34@gmail.com" method="post" enctype="text/plain">
+                  <div class="mb-3">
+                    <label class="form-label" for="name">Nama</label>
+                    <input class="form-control" id="name" name="name" placeholder="Nama kamu" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nama@mail.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="message">Pesan</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tulis pesanmu..." required></textarea>
+                  </div>
+                  <button class="btn btn-accent" type="submit">
+                    <i class="bi bi-send"></i> Kirim
+                  </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="small">© <span id="year"></span> Nama Kamu. Semua hak dilindungi.</div>
+      <div class="d-flex align-items-center gap-3 small">
+        <a class="link-muted" href="#about">Tentang</a>
+        <a class="link-muted" href="#projects">Proyek</a>
+        <a class="link-muted" href="#contact">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="btn btn-accent position-fixed" style="right: 1rem; bottom: 1rem; display:none" aria-label="Kembali ke atas">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Tahun otomatis di footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle light/dark (Bootstrap 5.3 data-bs-theme)
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) htmlEl.setAttribute('data-bs-theme', savedTheme);
+    themeToggle.addEventListener('click', () => {
+      const next = htmlEl.getAttribute('data-bs-theme') === 'light' ? 'dark' : 'light';
+      htmlEl.setAttribute('data-bs-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.innerHTML = next === 'dark' ? '<i class="bi bi-sun"></i> Tema' : '<i class="bi bi-moon-stars"></i> Tema';
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 400 ? 'block' : 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
